@@ -54,10 +54,10 @@ def sistema(t, y):
 st.sidebar.header("Digite a quantidade de seres presentes no ecossistema:")
 
 y0_dim = {
-    'A': st.sidebar.number_input("Aguapés/m²: ", value=10),
-    'G': st.sidebar.number_input("Girinos/m²: ", value=50),
-    'S': st.sidebar.number_input("Sapos/m²: ", value=5),
-    'E': st.sidebar.number_input("Escorpiões/m²: ", value=2)
+    'A': st.sidebar.number_input("Aguapés/m²: ", value=10,0),
+    'G': st.sidebar.number_input("Girinos/m²: ", value=50,0),
+    'S': st.sidebar.number_input("Sapos/m²: ", value=5,0),
+    'E': st.sidebar.number_input("Escorpiões/m²: ", value=2,0)
 }
 
 # Condições iniciais adimensionais
