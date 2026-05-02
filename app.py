@@ -152,7 +152,7 @@ if st.button("Rodar simulação"):
     nomes = ['A', 'G', 'S', 'E']
 
     unidades = {
-        'A': 'aguapés/m²',
+        'A': 'indivíduos/m²',
         'G': 'indivíduos/m²',
         'S': 'indivíduos/m²',
         'E': 'indivíduos/m²'
