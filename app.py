@@ -160,9 +160,9 @@ if st.button("Rodar simulação"):
 
     descricao = {
         'A': 'aguapés',
-        'G': 'população G',
-        'S': 'população S',
-        'E': 'população E'
+        'G': 'girinos,
+        'S': 'sapos',
+        'E': 'escorpiões'
     }
 
     st.subheader("Interpretação da Dinâmica Populacional")
