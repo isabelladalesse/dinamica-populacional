@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import solve_ivp
 
-st.title("Simulador de Dinâmica Populacional de Aguapés, Sapos e Escorpiões")
+st.title("Simulador de Dinâmica Populacional de Aguapés, Sapos-cururu e Escorpiões Amarelos")
 
 # Variáveis
 A, G, S, E = sp.symbols('A G S E')
