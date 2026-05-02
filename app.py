@@ -57,7 +57,7 @@ y0_dim = {
     'A': st.number_input("Aguapés/m²: ", value=10.0),
     'G': st.number_input("Girinos/m²: ", value=50.0),
     'S': st.number_input("Sapos/m²: ", value=5.0),
-    'E': st.number_input("Escorpiões/m²: ", value=2.0)
+    'E': st.number_input("Escorpiões/m²: ", value=0.4)
 }
 
 # Condições iniciais adimensionais
