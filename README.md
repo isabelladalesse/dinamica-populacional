@@ -15,7 +15,14 @@ A aplicação permite, a partir de uma condição incial de densidades populacio
 
 Em iniciação científica, modelei a interação entre as espécies supracitadas, obtendo:
 
-
+$$
+\begin{cases}
+        \dfrac{dA}{dt} = n_aA\left(1-\dfrac{A}{k_a}\right)\\
+        \dfrac{dG}{dt}=  n_{g} S\left(1-\dfrac{G}{\gamma(A)}\right) - \delta G\\
+        \dfrac{dS}{dt}=\delta G - \mu_s S\\
+        \dfrac{dE}{dt}=n_eE\left(1-\dfrac{E}{k_e}\right)-\lambda(E).
+    \end{cases}
+$$
 
 Os valores dos parâmetros foram obtidos após uma cuidadosa revisão de literatura.
 
