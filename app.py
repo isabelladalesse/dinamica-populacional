@@ -160,7 +160,7 @@ if st.button("Rodar simulação"):
 
     descricao = {
         'A': 'aguapés',
-        'G': 'girinos,
+        'G': 'girinos',
         'S': 'sapos',
         'E': 'escorpiões'
     }
