@@ -51,7 +51,7 @@ def sistema(t, y):
     return f_num(A, G, S, E)
 
 
-st.subheader("Digite a quantidade de seres presentes no ecossistema:")
+st.subheader("Insira a densidade de seres presentes no ecossistema:")
 
 y0_dim = {
     'A': st.number_input("Aguapés/m²: ", value=10.0),
