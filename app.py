@@ -195,7 +195,7 @@ if st.button("Rodar simulação"):
             tendencia = "permaneceu constante"
 
         st.write(f"A população de {descricao[nome]} {tendencia} de "
-            f"{inicial:.2f} para {final:.2f} {unidades[nome]}, "
+            f"{inicial:.5f} para {final:.5f} {unidades[nome]}, "
             f"atingindo estabilização após aproximadamente {tempo:.2f} ano(s).\n")
 
     # Análise global
