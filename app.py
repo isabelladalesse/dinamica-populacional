@@ -69,10 +69,10 @@ with st.expander("Dúvidas sobre quais valores utilizar?"):
 
 
 y0_dim = {
-    'A': st.number_input("Aguapés/m²: ", value=7.0, format="%.5f"),
-    'G': st.number_input("Girinos/m²: ", value=50.0, format="%.5f"),
+    'A': st.number_input("Aguapés/m²: ", value=7.0, format="%.1f"),
+    'G': st.number_input("Girinos/m²: ", value=50.0, format="%.1f"),
     'S': st.number_input("Sapos/m²: ", value=0.0001, format="%.5f"),
-    'E': st.number_input("Escorpiões/m²: ", value=0.05, format="%.5f")
+    'E': st.number_input("Escorpiões/m²: ", value=0.05, format="%.3f")
 }
 
 # Condições iniciais adimensionais
