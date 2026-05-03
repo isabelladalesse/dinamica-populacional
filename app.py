@@ -52,12 +52,27 @@ def sistema(t, y):
 
 
 st.subheader("Insira a densidade de seres presentes no ecossistema:")
+with st.expander("Dúvidas sobre quais valores utilizar?"):
+    st.write("""
+    Os valores abaixo, obtidos a partir de artigos científicos, se referem a **densidades médias** das respectivas populações.
+    Eles podem ser utilizados como referência para definir as condições iniciais da simulação. 
+    Você pode modificá-los livremente para analisar diferentes cenários e observar como as populações evoluem ao longo do tempo.
+    """)
+    
+    # Usando uma lista para organizar as densidades
+    st.markdown("""
+    - **Aguapés:** aproximadamente 14 indivíduos por $m^2$
+    - **Girinos:** aproximadamente 144 indivíduos por $m^2$
+    - **Sapos:** aproximadamente 0,000381 indivíduos por $m^2$
+    - **Escorpiões:** aproximadamente 0,17 indivíduos por $m^2$
+    """)
+
 
 y0_dim = {
-    'A': st.number_input("Aguapés/m²: ", value=10.0),
+    'A': st.number_input("Aguapés/m²: ", value=7.0),
     'G': st.number_input("Girinos/m²: ", value=50.0),
-    'S': st.number_input("Sapos/m²: ", value=5.0),
-    'E': st.number_input("Escorpiões/m²: ", value=0.4)
+    'S': st.number_input("Sapos/m²: ", value=0.0001),
+    'E': st.number_input("Escorpiões/m²: ", value=0.05)
 }
 
 # Condições iniciais adimensionais
