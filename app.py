@@ -10,18 +10,22 @@ st.title("Simulador de Dinâmica Populacional de Aguapés, Sapos-cururu e Escorp
 A, G, S, E = sp.symbols('A G S E')
 vars = (A, G, S, E)
 
-# Parâmetros
-na, ne, mu_s, delta, alpha, beta, theta = sp.symbols('na ne mu_s delta alpha beta theta')
-ka, kg, ks, ke, ng = sp.symbols('ka kg ks ke ng')
+# Parâmetros admensionais
+n_a, n_e, k, mu_s, mu_a, delta, alpha, beta, theta, lambda_ = sp.symbols('n_a n_e k mu_s mu_a delta alpha beta theta lambda')
 
 param_values = {
-na: 2.73e-3,
-ne: 3.26e-3,
+n_a: 2.73e-3,
+n_e: 3.26e-3,
+k: 3.78e-5,
 mu_s: 1.97e-5,
+mu_a:0,
 delta: 7.57e-7,
 alpha: 1.07,
 beta: 2.18e-3,
-theta: 0.18}
+theta: 0.18 }
+
+# Parâmetros dimensionais
+ka, kg, ke, ng = sp.symbols('ka kg ke ng')
 
 param_dim_values = {
 ka: 14,
@@ -31,10 +35,10 @@ ng: 6600
 }
 
 # Sistema
-dA = na*A*(1-A)
+dA = n_a*A*(1-A) - mu_a*A
 dG = S*(1-G*(1+(A**2/alpha**2)))-delta*G
-dS = delta*G-mu_s*S
-dE = E*ne*(1-E)-E*S*beta*(1+(E**2/theta**2))
+dS = delta*G*(1-S*k)-mu_s*S
+dE = E*n_e*(1-E)-E*S*beta*(E**2 / (theta**2 + E**2))
 
 dA_num = dA.subs(param_values)
 dG_num = dG.subs(param_values)
