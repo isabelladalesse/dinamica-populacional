@@ -93,8 +93,8 @@ y0 = [
 ]
 
 if st.button("Rodar simulação"):
-    t_span = (0, 10000)
-    t_eval = np.linspace(0, 10000, 1000)
+    t_span = (0, 80000)
+    t_eval = np.linspace(0, 80000, 1000)
     sol = solve_ivp(sistema, t_span, y0, t_eval=t_eval, method='LSODA')
 
     # Gráfico
