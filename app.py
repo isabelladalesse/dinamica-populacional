@@ -11,10 +11,11 @@ A, G, S, E = sp.symbols('A G S E')
 vars = (A, G, S, E)
 
 # Parâmetros admensionais
-n_a, n_e, k, mu_s, mu_a, delta, alpha, beta, theta, lambda_ = sp.symbols('n_a n_e k mu_s mu_a delta alpha beta theta lambda')
+n_a, n_g, n_e, k, mu_s, mu_a, delta, alpha, beta, theta, lambda_ = sp.symbols('n_a n_g n_e k mu_s mu_a delta alpha beta theta lambda')
 
 param_values = {
 n_a: 2.73e-3,
+n_g: 0.18,
 n_e: 3.26e-3,
 k: 3.78e-5,
 mu_s: 1.97e-5,
