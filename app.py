@@ -30,7 +30,7 @@ ka, kg, ks, ke, ng = sp.symbols('ka kg ks ke ng')
 param_dim_values = {
 ka: 14,
 kg: 144,
-ks: 0.000381
+ks: 0.000381,
 ke: 0.17,
 ng: 6600
 }
