@@ -25,20 +25,21 @@ beta: 2.18e-3,
 theta: 0.18 }
 
 # Parâmetros dimensionais
-ka, kg, ke, ng = sp.symbols('ka kg ke ng')
+ka, kg, ks, ke, ng = sp.symbols('ka kg ks ke ng')
 
 param_dim_values = {
 ka: 14,
 kg: 144,
+ks: 0.000381
 ke: 0.17,
 ng: 6600
 }
 
 # Sistema
-dA = n_a*A*(1-A) - mu_a*A
-dG = S*(1-G*(1+(A**2/alpha**2)))-delta*G
-dS = delta*G*(1-S*k)-mu_s*S
-dE = E*n_e*(1-E)-E*S*beta*(E**2 / (theta**2 + E**2))
+dA = n_a*A*(1 - A) - A
+dG = n_g*(1/k)*S*(1 - G*(1 + (A**2/alpha**2))) - delta*G
+dS = delta*k*G*(1 - S) - mu_s*S
+dE = E*(n_e*(1 - E) - beta*S*(E**2 / (theta**2 + E**2)))
 
 dA_num = dA.subs(param_values)
 dG_num = dG.subs(param_values)
@@ -83,7 +84,7 @@ y0_dim = {
 map_k = {
     'A': ka,
     'G': kg,
-    'S': kg,
+    'S': ks,
     'E': ke
 }
 
